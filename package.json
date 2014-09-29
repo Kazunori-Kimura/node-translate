@@ -11,5 +11,21 @@
     "translate"
   ],
   "author": "kazunori.kimura.js@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^0.6.2",
+    "commander": "^2.3.0",
+    "config": "^1.2.1",
+    "here": "0.0.2",
+    "request": "^2.44.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kazunori-Kimura/node-translate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kazunori-Kimura/node-translate/issues"
+  },
+  "homepage": "https://github.com/Kazunori-Kimura/node-translate"
 }

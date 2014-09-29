@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+// node-translate
+// 2014-09-29 kazunori.kimura
+
+process.bin = process.title = "trns";
+
+var commander = require("commander"),
+    here = require("here").here,
+    translate = require("../lib");
+
+var package = require("../package.json");
+
+// command option
+commander.version(package.version)
+    .option("-k, --key [api key]", "Google API Key")
+    .option("-s, --source [lang]", "Language code")
+    .option("-t, --target [lang]", "Language code")
+    .option("-q, --query [word or phrase]", "identify the string to translate.");
+
+// get command line arguments
+commander.parse(process.argv);
+
+if(commander.query){
+    // call Google Translate API
+    translate.execute(
+        commander.query,
+        commander.source,
+        commander.target,
+        commander.key);
+}
