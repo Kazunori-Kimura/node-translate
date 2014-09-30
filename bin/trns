@@ -12,11 +12,11 @@ var package = require("../package.json");
 
 // command option
 commander.version(package.version)
-    .option("-q, --query [word or phrase]", "identify the string to translate.")
-    .option("-s, --source [lang]", "Language code")
-    .option("-t, --target [lang]", "Language code")
-    .option("-c, --clientId [client_id]", "Microsoft Azure client_id")
-    .option("-S, --clientSecret [client_secret]", "Microsoft Azure client_secret");
+    .option("-q, --query [word or phrase]", "翻訳する単語/文章")
+    .option("-s, --source [lang]", "queryに指定した単語/文章の言語 (Language Codeで指定)")
+    .option("-t, --target [lang]", "翻訳する言語 (Language Codeで指定)")
+    .option("-c, --clientId [client_id]", "Microsoft Translate API client_id")
+    .option("-S, --clientSecret [client_secret]", "Microsoft Translate API client_secret");
 
 // get command line arguments
 commander.parse(process.argv);
