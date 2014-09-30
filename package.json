@@ -1,8 +1,11 @@
 {
   "name": "node-translate",
   "version": "0.0.1",
-  "description": "Google Translate API commandline wrapper",
+  "description": "Microsoft Translate API commandline wrapper",
   "main": "lib/index.js",
+  "bin": {
+    "trns": "bin/trns"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
